@@ -23,7 +23,8 @@ public interface Bag<Item> extends Iterable<Item> {
 }
 ```
 #### Implementation
-* Using array
+##### Using array
+* Basic methods:
 ```
 public class Array<Item> {
     Item[] items;
@@ -33,3 +34,9 @@ public class Array<Item> {
     public int size();
 }
 ```
+* Addition methods:
+  - For implement iterative method
+  ```
+  public Item getAt(int index)
+  ```
+  

@@ -1,5 +1,10 @@
 package datastructure;
 
+/**
+ * Array - data structure
+ * @param <Item> type of item in the array
+ * @author ngoming
+ */
 public class Array<Item> {
 
     // capacity default
@@ -17,6 +22,15 @@ public class Array<Item> {
     public Array() {
         items = (Item[]) new Object[CAPACITY_DEFAULT];
         size = 0;
+    }
+
+    /**
+     * Get value of indexed item
+     * @param index index of needed item
+     * @return value of the item
+     */
+    public Item getAt(int index) {
+        return items[index];
     }
 
     /**
