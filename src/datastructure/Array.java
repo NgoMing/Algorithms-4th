@@ -43,6 +43,15 @@ public class Array<Item> {
     }
 
     /**
+     * Remove item at the end of the array
+     * @return value of the removed item
+     */
+    public Item removeItem() {
+        size --;
+        return items[size];
+    }
+
+    /**
      * Check empty status of the array
      * @return true if empty, otherwise false
      */

@@ -20,4 +20,16 @@ public class ArrayTest {
         assertEquals(1, array.size());
         assertFalse(array.isEmpty());
     }
+
+    @Test
+    public void shouldRemoveItemCorrectly() throws Exception {
+        Array<Integer> array = new Array<>();
+        array.addItem(5);
+        Integer removedItem = array.removeItem();
+
+        assertTrue(array.isEmpty());
+        assertEquals(0, array.size());
+        assertEquals((Integer)5, removedItem);
+    }
+
 }

@@ -40,3 +40,26 @@ public class Array<Item> {
   public Item getAt(int index)
   ```
   
+### Queue - FIFO
+#### Definition
+* A collection that is based on the first-on-first-out (FIFO) policy
+* Preserve relative order
+
+#### Operations
+```
+public interface Queue<Item> extends Iterable<Item> {
+    void enqueue(Item item);
+    Item dequeue();
+    boolean isEmpty();
+    int size();
+}
+```
+
+#### Implementation
+##### Using array
+* Addition methods:
+  - For implement enqueue method
+    ```
+    public Item removeItem();
+    ```
+  
