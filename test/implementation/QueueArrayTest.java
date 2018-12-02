@@ -26,10 +26,10 @@ public class QueueArrayTest {
     public void shouldDequeueCorrectly() throws Exception {
         Queue<Integer> integerQueue = new QueueArray<>();
         integerQueue.enqueue(5);
+        integerQueue.enqueue(4);
         Integer removedItem = integerQueue.dequeue();
 
-        assertTrue(integerQueue.isEmpty());
-        assertEquals(0, integerQueue.size());
+        assertEquals(1, integerQueue.size());
         assertEquals((Integer)5, removedItem);
     }
 
@@ -42,8 +42,7 @@ public class QueueArrayTest {
 
         index = 0;
         for (Integer i : integerQueue) {
-            assertEquals((Integer)index, i);
-            index ++;
+            assertEquals((Integer)index ++, i);
         }
     }
 

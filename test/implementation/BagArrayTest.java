@@ -32,8 +32,7 @@ public class BagArrayTest {
 
         index = 0;
         for (Integer i : integerBag) {
-            assertEquals((Integer)index, i);
-            index ++;
+            assertEquals((Integer)index ++, i);
         }
     }
 

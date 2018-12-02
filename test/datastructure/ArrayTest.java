@@ -16,7 +16,7 @@ public class ArrayTest {
     @Test
     public void shouldAddItemCorrectly() throws Exception {
         Array<Integer> array = new Array<>();
-        array.addItem(5);
+        array.addLastItem(5);
         assertEquals(1, array.size());
         assertFalse(array.isEmpty());
     }
@@ -24,8 +24,8 @@ public class ArrayTest {
     @Test
     public void shouldRemoveItemCorrectly() throws Exception {
         Array<Integer> array = new Array<>();
-        array.addItem(5);
-        Integer removedItem = array.removeItem();
+        array.addLastItem(5);
+        Integer removedItem = array.removeLastItem();
 
         assertTrue(array.isEmpty());
         assertEquals(0, array.size());

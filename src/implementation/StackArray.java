@@ -1,35 +1,30 @@
 package implementation;
 
-import ADT.Queue;
+import ADT.Stack;
 import datastructure.Array;
 
 import java.util.Iterator;
 
-/**
- * Implement Queue ADT using array
- * @param <Item> type of items in the queue
- * @author ngoming
- */
-public class QueueArray<Item> implements Queue<Item> {
+public class StackArray<Item> implements Stack<Item> {
 
-    // Store items of the queue
+    // Stores items of the stack
     Array<Item> items;
 
     /**
      * Constructor without param
      */
-    public QueueArray() {
+    public StackArray() {
         items = new Array<>();
     }
 
     @Override
-    public void enqueue(Item item) {
+    public void push(Item item) {
         items.addLastItem(item);
     }
 
     @Override
-    public Item dequeue() {
-        return items.removeFirstItem();
+    public Item pop() {
+        return items.removeLastItem();
     }
 
     @Override
@@ -44,10 +39,10 @@ public class QueueArray<Item> implements Queue<Item> {
 
     @Override
     public Iterator<Item> iterator() {
-        return new QueueArrayIterator();
+        return new StackArrayIterator();
     }
 
-    private class QueueArrayIterator implements Iterator<Item> {
+    private class StackArrayIterator implements Iterator<Item> {
 
         int trackIndex = 0;
 
@@ -58,7 +53,7 @@ public class QueueArray<Item> implements Queue<Item> {
 
         @Override
         public Item next() {
-            return items.getAt(trackIndex++);
+            return items.getAt(trackIndex ++);
         }
     }
 }

@@ -37,7 +37,7 @@ public class Array<Item> {
      * Add item at the end of the array
      * @param value value should be set to the specific item
      */
-    public void addItem(Item value) {
+    public void addLastItem(Item value) {
         items[size] = value;
         size ++;
     }
@@ -46,9 +46,31 @@ public class Array<Item> {
      * Remove item at the end of the array
      * @return value of the removed item
      */
-    public Item removeItem() {
+    public Item removeLastItem() {
         size --;
         return items[size];
+    }
+
+    /**
+     * Remove item at the first of the array
+     * @return value of the removed item
+     */
+    public Item removeFirstItem() {
+        Item removedItem = items[0];
+        size --;
+        shiftLeft();
+        return removedItem;
+    }
+
+    /**
+     * Shift all items one step to the left
+     */
+    private void shiftLeft() {
+        Item[] newItems = (Item[]) new Object[CAPACITY_DEFAULT];
+        for (int i = 1; i < size; i++) {
+            newItems[i - 1] = items[i];
+        }
+        items = newItems;
     }
 
     /**

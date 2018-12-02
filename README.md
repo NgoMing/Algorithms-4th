@@ -62,4 +62,22 @@ public interface Queue<Item> extends Iterable<Item> {
     ```
     public Item removeItem();
     ```
+    
+### Stack - LIFO
+#### Definition
+* A collection that is based on the last-in-first-out (LIFO)
+* Reverse relative order
+
+#### Operations
+```
+public interface Stack<Item> extends Iterable<Item> {
+    void push(Item item)
+    Item pop()
+    boolean isEmpty();
+    int size();
+}
+``` 
+
+#### Implementation
+##### Using array
   

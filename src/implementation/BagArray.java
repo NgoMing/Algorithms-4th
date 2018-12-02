@@ -24,7 +24,7 @@ public class BagArray<Item> implements Bag<Item> {
 
     @Override
     public void add(Item item) {
-        items.addItem(item);
+        items.addLastItem(item);
     }
 
     @Override
