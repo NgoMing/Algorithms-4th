@@ -24,3 +24,12 @@ public interface Bag<Item> extends Iterable<Item> {
 ```
 #### Implementation
 * Using array
+```
+public class Array<Item> {
+    Item[] items;
+    public Array();
+    public void addItem(Item item);
+    public boolean isEmpty();
+    public int size();
+}
+```
